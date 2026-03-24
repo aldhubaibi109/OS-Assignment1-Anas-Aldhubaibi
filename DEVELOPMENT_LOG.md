@@ -32,29 +32,33 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Your Development Log:
 
-### Entry 1 - [Date and Time]
-**What I did**: 
+### Entry 1 - [March 21]
+**What I did**: Setup the environment and implemented Feature 1
 
-**Details**: 
+**Details**: Forked the repository and renamed it.  
+​Updated the studentID variable in SchedulerSimulation.java.  
+​Added the priority field to the Process class and updated the constructor
 
-**Challenges**: 
+**Challenges**: Understanding how to integrate the random priority generation within the existing process creation loop
 
-**Solution**: 
+**Solution**: Used random.nextInt(5) + 1 to generate priorities between 1 and 5 and updated the addProcessToQueue method to display it
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**: 
+### Entry 2 - [March 24]
+**What I did**: Implemented Feature 2 (Context Switch Counter)
 
-**Details**: 
+**Details**: Added a static variable contextSwitches to the SchedulerSimulation class.  
+​Modified the scheduling loop to increment the counter every time a thread starts.  
+​Displayed the total count at the end of the simulation.
 
-**Challenges**: 
+**Challenges**: Determining the exact location in the while loop to increment the counter accurately
 
-**Solution**: 
+**Solution**: Placed the increment right before currentThread.start() to capture every switch
 
-**Time spent**: 
+**Time spent**: 45 minutes
 
 ---
 
