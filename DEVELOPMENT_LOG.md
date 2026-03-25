@@ -78,16 +78,17 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**: 
+### Entry 4 - [March 25,7:30 PM]
+**What I did**: Code debugging and output formatting enhancement
 
-**Details**: 
+**Details**: Fixed a compilation error where the getWaitingTime() method was undefined in the Process class.  
+​Corrected the method name from priority() to getPriority() to ensure consistency with Java naming conventions.
 
-**Challenges**: 
+**Challenges**: Encountering a "symbol not found" error during compilation after adding the final summary table
 
-**Solution**: 
+**Solution**: Carefully re-examined the Process class scope and ensured all new methods and variables (creationTime, finishTime) were correctly defined inside the class braces.
 
-**Time spent**: 
+**Time spent**: 1.5 hours
 
 ---
 
