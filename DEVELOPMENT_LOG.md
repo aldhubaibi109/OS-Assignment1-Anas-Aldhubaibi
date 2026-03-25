@@ -62,16 +62,19 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**: 
+### Entry 3 - [March 25]
+**What I did**: Implemented Feature 3 (Waiting Time Tracking)
 
-**Details**: 
+**Details**: Added creationTime and finishTime variables to the Process class.  
+​Used System.currentTimeMillis() to capture the exact time a process enters the system and when it completes.  
+​Created a getWaitingTime() method to calculate the difference.  
+​Designed a formatted summary table at the end of main to display the results.
 
-**Challenges**: 
+**Challenges**: Ensuring the waiting time calculation correctly subtracted the burst time from the total turnaround time.
 
-**Solution**: 
+**Solution**: Verified the logic by comparing manual calculations with the program's output table
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
