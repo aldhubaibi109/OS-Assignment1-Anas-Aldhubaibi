@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.PriorityQueue;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
@@ -129,7 +130,7 @@ class Process implements Runnable {
             System.out.println(Colors.RED + "  ✗ " + name + " was interrupted." + Colors.RESET);
         }
     }
-    public long getWaitingTime() {ا
+    public long getWaitingTime() {
     return (finishTime - creationTime) - burstTime;
 }
     // Getter methods for process name, burst time, and remaining time
@@ -168,12 +169,16 @@ public class SchedulerSimulation {
         
         // Generate random number of processes between 10 and 20
         int numProcesses = 10 + random.nextInt(11); // Random number between 10 and 20
+
+         Map<Thread, Process> processMap = new HashMap<>();
+Queue<Thread> processQueue = new PriorityQueue<>(
+    (t1, t2) -> Integer.compare(
+        processMap.get(t2).getPriority(),
+        processMap.get(t1).getPriority()
+    )
+);
         
-        // Queue to manage processes in a First-In-First-Out (FIFO) order
-        Queue<Thread> processQueue = new LinkedList<>();
-        
-        // Map to associate each thread with its respective process object
-        Map<Thread, Process> processMap = new HashMap<>();
+      
         
         // Print simulation header with elegant formatting
         System.out.println("\n" + Colors.BOLD + Colors.BRIGHT_CYAN + 
@@ -311,12 +316,14 @@ public class SchedulerSimulation {
                                         Map<Thread, Process> processMap) {
         // Create a new thread to run the process
         Thread thread = new Thread(process);
+
+        // Map the thread to the process, so we can track the process associated with each thread
+        processMap.put(thread, process);
         
         // Add the thread to the ready queue
         processQueue.add(thread);
         
-        // Map the thread to the process, so we can track the process associated with each thread
-        processMap.put(thread, process);
+        
         
         // Print a message indicating the process has entered the ready queue
        System.out.println(Colors.BLUE + "  ➕ " + Colors.BOLD + Colors.CYAN + process.getName() + 
