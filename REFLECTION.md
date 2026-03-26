@@ -9,7 +9,12 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Write your answer here. Discuss specific concepts like thread creation, thread states, how threads execute concurrently, what surprised you, etc.]
+[From this assignment, I learned how to create threads in Java using the Runnable interface and the run() method.
+I understood that each thread has a lifecycle: New, Runnable, Running, Waiting, and Terminated.
+I also learned how methods like start(), join(), and sleep() control these states.
+One interesting point was that threads share the same memory, which made data sharing easier.
+I noticed that while a thread is sleeping, the main thread can still be waiting using join().
+This helped me see how multiple threads can run and coordinate at the same time.
 
 ---
 
@@ -17,7 +22,12 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Describe the specific challenge. Was it understanding the code? Implementing a feature? Using Git? Explain what made it difficult and how it relates to the course concepts.]
+[The most challenging part was making the priority feature actually affect scheduling, not just display a value.
+At first, processes still ran in FIFO order because I used a LinkedList.
+Switching to a PriorityQueue with a custom Comparator caused a NullPointerException.
+The issue was that the Comparator was called before the thread was added to processMap.
+This made processMap.get() return null, which caused the error.
+Fixing it required understanding both PriorityQueue behavior and the order of operations in my code.]
 
 ---
 
@@ -25,15 +35,22 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Describe your problem-solving approach. Did you read documentation? Ask for help? Debug systematically? What resources did you use? What strategies worked?]
-
+[It showed that processMap.get() was returning null inside the Comparator.
+I traced addProcessToQueue() step by step to find the issue.
+I realized processQueue.add() was called before processMap.put().
+I fixed it by swapping the order so the map is updated first.
+I also tested each feature separately to avoid multiple issues.
 ---
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
 **Your Answer:**
 
-[Give specific examples from real applications you use (web browsers, games, mobile apps, etc.). Explain why threads are useful in those scenarios. Connect to what you learned in this assignment.]
+[Multithreading is used in real apps like web browsers, where different tasks run at the same time.
+For example, one thread handles page rendering while another handles user input.
+Without it, the app would freeze while waiting for tasks to finish.
+Another example is music apps, where audio plays while you browse the UI.
+This is similar to the Round-Robin idea of switching between tasks quickly.
 
 ---
 
