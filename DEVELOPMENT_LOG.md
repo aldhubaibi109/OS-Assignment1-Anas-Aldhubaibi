@@ -92,16 +92,21 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**: 
+### Entry 5 - [April 2 ]
+**What I did**: Recorded the demo video and explained the implementation
 
-**Details**: 
+**Details**: Opened the project in VS Code and ran the simulation to make sure the output is clean
+Recorded a demo video showing the code running with my student ID (445052785)
+Explained Feature 1 (Process Priority) by showing how each process enters the ready queue with its priority displayed
+Explained Feature 2 (Context Switch Counter) by pointing to the total context switches printed at the end
+Explained Feature 3 (Waiting Time Tracking) by walking through the summary table showing each process, burst time, and waiting time
+Explained the threading concepts Thread.start(), Thread.join(), and Thread.sleep() using my own code as an example
 
-**Challenges**: 
+**Challenges**: Making the explanation clear and under 30 seconds for each concept while also showing the relevant part of the code
 
-**Solution**: 
+**Solution**: Practiced the explanation a few times before recording to make sure it was concise and covered all required points
 
-**Time spent**: 
+**Time spent**: 30minutes
 
 ---
 
