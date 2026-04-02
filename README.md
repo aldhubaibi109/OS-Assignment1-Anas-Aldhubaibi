@@ -368,7 +368,8 @@ Create a **2-3 minute video** (not shorter, not longer) showing:
 - Show your face OR use clear voice narration
 - Screen recording showing your code and execution
 - Good audio quality (test your microphone first!)
-
+- my video
+https://drive.google.com/file/d/16RM6a41nC0KnZaz6OlPF3sgQhgWopmOz/view?usp=drivesdk
 **Recording Tools:**
 - **Mac:** QuickTime Player (File → New Screen Recording)
 - **Windows:** Xbox Game Bar (Win + G) or OBS Studio
